@@ -1,0 +1,909 @@
+<html>
+
+<head>
+  <title>navbar</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .flex-container {
+      display: flex;
+      text-align: center;
+      background-color: antiquewhite;
+      position: fixed;
+      width: 100%;
+      margin: 0px;
+    }
+
+    .flex-container>div {
+      margin: 10px;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      display: block;
+      color: blue;
+    }
+
+    .flex-container>div:hover {
+      background-color: beige;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: right;
+      width: 50%;
+      padding: 10px;
+      height: 100%;
+      /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .flex-container2 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .flex-container2>div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      width: 30%;
+      height: 20%;
+      text-align: center;
+    }
+
+    /*3rd page*/
+    .flex-container3 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .flex-container3>div {
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .flex-container3>button {
+      justify-content: center;
+    }
+
+    /*4thpage*/
+    .column2 {
+      float: right;
+      width: 50%;
+      padding: 10%;
+      height: 80%;
+      justify-content: center;
+    }
+
+    .row2:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /*grid*/
+    .item2 {
+      grid-area: menu;
+    }
+
+    .item3 {
+      grid-area: main;
+    }
+
+    .item5 {
+      grid-area: footer;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+
+        'menu main main main main main'
+        'menu main main main main main';
+
+      grid-gap: 10px;
+      background-color: #ebf0f3;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      text-align: left;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .accordion:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: left;
+      padding: 2px;
+
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    .panel {
+      padding: 0 10px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    /*4thpage*/
+    * {box-sizing: border-box}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*4thend*/
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.checked {
+  color: orange;}
+  .grid-container5 {
+      display: grid;
+      grid-template-areas:
+
+        'menu main main main main main'
+        'menu main main main main main';
+
+      grid-gap: 20px;
+      background-color: #ebf0f3;
+      padding: 10px;
+    }
+
+    .grid-container5>div {
+      text-align: center;
+      padding-left: 20%;
+      font-size: 20px;
+    }
+   /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+​* {
+  box-sizing: border-box;
+}
+
+.flex-container7{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .flex-container7>div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      width: 50%;
+      height: 20%;
+      text-align: center;}
+      * {
+  box-sizing: border-box;
+
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin:20px;
+  padding:10px;
+}
+
+.content2 {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+.row2 {
+  margin:2px;
+}
+/* Add padding BETWEEN each column */
+
+/* Create four equal columns that floats next to each other */
+.column2{
+  float: left;
+  
+}
+/* Clear floats after rows */ 
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column2 {
+    width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+  }
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container10 {
+  display: grid;
+  margin:30px;
+  grid-template-areas:
+  'header header header header right right'
+  'menu menu main main right right'
+  'footer footer footer footer right right';
+  width: 100%;
+  
+  grid-gap: 3px;
+  background-image:url(https://img.freepik.com/free-vector/cerulean-blue-curve-frame-template_53876-99029.jpg?w=2000);
+  
+}
+
+.grid-container10> div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align:center;
+  padding: 10px;
+  font-size: 20px;
+}  
+</style>
+</head>
+<body>
+
+
+  <div class="flex-container">
+    <div style="padding-left:10%;"><b>Selfown</b></div>
+    <div style="padding-left:10%;"><a href="#HOME">Home</a></div>
+    <div><a href="#about">About</a></div>
+    <div><a href="#services">Services</a></div>
+    <div><a href="#resume">resume</a></div>
+    <div><a href="#projects">Projects</a></div>
+    <div><a href="#blogs">Blogs</a></div>
+    <div><a href="#contact">Contact</a></div>
+  </div>
+  <br>
+  <!--hi-->
+  <div id="HOME">
+  <div class="row">
+    <div class="column" style="background-color:antiquewhite;">
+      <br><br><br>
+      <button style="color:blue;">Hire me!</button>
+      <p><img src="https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          width="500" height="500"> </p>
+    </div>
+    <div class="column" style="background-color:antiquewhite; padding-top: 20%;padding-left:30px;">
+      <h2>Hi I am ANGELIN</h2>
+      <p>
+      <h1>I am a Freelance react developer</h1>
+      </p>
+    </div>
+  </div>
+  <br>
+  <br>
+  </div>
+  <!--end-->
+  <!--per-->
+  <div id="about">
+  <div class="row">
+    <div class="column">
+      <br><br><br>
+      <h2> Date of birth:21/02/2001<br>
+        Languages Known: Tamil,English<br>
+        Nationality: Indian<br>
+        Interest: Drawing,singing</h2>
+      <br>
+      <!--card-->
+      <div class="flex-container2">
+        <div>
+          <i class="fa-brands fa-angular" style="color: #d51024;font-size:30px;"></i>
+          <p>Angular<br>1yr experience</p>
+        </div>
+        <div> <i class="fa-brands fa-vuejs" style="color: #2cba9d;font-size:30px;"></i>
+          <p>vue<br>1yr experience</p>
+        </div>
+        <div><i class="fa-solid fa-leaf" style="color: #207e27;font-size: 30px;"></i>
+          <p>Mongo<br>3yr experience</p>
+        </div>
+      </div>
+      <!--containerend-->
+    </div>
+    <!--perend-->
+    <div class="column" style="padding-left: 5%;">
+      <p>
+      <h2 style="text-shadow: 0px 2px 4px  #f78707;">Personal details</h2><br>
+      <p>
+      <h3>The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
+        <i class="fa-brands fa-github" style="padding-left: 6px;"></i>
+        <i class="fa-brands fa-twitter" style="padding-left: 6px;"></i>
+        <i class="fa-brands fa-goodreads-g" style="padding-left: 6px;"></i>
+        <i class="fa-brands fa-linkedin" style="padding-left: 6px;"></i>
+      </h3>
+      </p>
+      <br>
+      <div class="flex-container2">
+        <div style="width:28%;">
+          <i class="fa-brands fa-android" style="color: #45be19; font-size: 30px;"></i>
+          <p>Android<br>2year experience</p>
+        </div>
+        <div><i class="fa-brands fa-bootstrap" style="color: #5213e7;font-size:30px;"></i>
+          <p> Bootstrap<br>3yr experience</p>
+        </div>
+        <div><i class="fa-brands fa-laravel" style="color: #eb0505;font-size: 30px;"></i>
+          <p>laravel<br>2yr experience</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--3rd page-->
+    <div id="services">
+
+    <div class="flexcontainer3" style="text-align: center;">
+      <div>
+        <h3><button style="color:#207e27">services</button></h3>
+      </div>
+      <div>
+        <H1> OUR SERVICES</H1>
+      </div>
+      <div>
+        <h2>You will face many defeats in life, but never let yourself be defeated.<br>
+          The greatest glory in living lies not in never falling, but in rising every time we fall.</h2>
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="flex-container2" style="width: 102%;">
+      <div><i class="fa-solid fa-graduation-cap" style="color: #e6650f;font-size:80;"></i>
+        <h2>Awesome support</h2>
+        Awesome Support is the most versatile and feature-rich support plugin for WordPress.
+        It is the only helpdesk & support ticketing plugin that can match the feature .
+      </div>
+      <div><i class="fa-sharp fa-light fa-dollar-sign" style="color: #0b5fef;font-size:80;"></i><br>
+        <h2>Dynamic growth</h2>
+        calculation based on the dynamic curve of
+        second class of variable was dynamic growth rate,
+        defined as the slope between two successive measurements along the season.
+      </div>
+      <div style="width:33%;"><i class="fa-regular fa-square-check" style="color: #60d214;font-size:80;"></i><br>
+        <h2>Branding identity</h2>the distinguishing character or personality of an individuality.
+        the relation established by psychological identification.
+        the condition of being the same with something described or asserted.
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+  </div>
+  <!--4th page-->
+  <div id="resume">
+  <div class="flexcontainer3" style="text-align: center;">
+    <div>
+      <h3><button style="color:#207e27">Lifetime</button></h3>
+    </div>
+    <div>
+      <H1>EDUCATIONS & EXPERIENCE</H1>
+    </div>
+    <DIV style="font-size:20px;">Education socializes children into society by teaching cultural
+      values andnorms.<br>It equips them with the skills needed to become productive members of sociel</DIV>
+    <br><br><br>
+  </div>
+  <div class="grid-container">
+
+    <div class="item2"> <img
+        src="https://www.govconnection.com/~/media/images/brands/g/google/education/1792574-psg-google-chrome-k12-p2-m3a.gif?h=338&la=en&w=600&v=1"
+        width="300" height="250" float="left"></div>
+    <div class="item3"><button class="accordion"style="color:#0b5fef"><b>Diploma in computer engineering</b></button>
+      <div class="panel"style="font-size:10px;">
+        <p><h2>A diploma is a document awarded by an educational institution (such as a college or university) 
+          testifying the recipient has graduated by successfully completing their courses of studies</h2>.</p>
+      </div>
+
+      <button class="accordion"style="color:#0b5fef"><b>ITI,Machinist</b></button>
+      <div class="panel"style="font-size:10px;">
+        <p><h2>ITI passed trainees(National Trade Certificate Holder)by registering their name in Government Related Instruction Centres(RIC) and by attending Campus.
+          The full form of ITI is Industrial Training Institute and it is a government training organization responsible for providing high school students with industry-related education.</h2> </p>
+      </div>
+      <button class="accordion" style="color:#0b5fef"><b>HAPF Paramahamsa metriculaion</b></button>
+      <div class="panel"style="font-size:10px;">
+        <p><h2>A school is an educational institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers. 
+          Most countries have systems of formal education, which is sometimes compulsory.</h2></p>
+      </div>
+    </div>
+
+
+  </div>
+  <br><br><br>
+  <!--2nd grid-->
+  <div class="grid-container">
+
+    <div class="item2"> <img
+        src="https://cdn.dribbble.com/users/8619169/screenshots/16116886/media/a63d64bcccad878cb9dfdb9a9f6b6416.gif"
+        width="300" height="250" float="left"></div>
+    <div class="item3"><button class="accordion"style="color:#0b5fef"><b>Intenship in HILIFE</b></button>
+      <div class="panel" style="font-size:10px;">
+        <p><h2>The general purpose of Hilife.AI is to develop and promote advanced IT services for multi-user operation ·
+           Our emphasis is on offering a high degree of product</h2><br>
+           <button style="background-color: #7ea9f3;color:#0b5fef">download cv</button></p>
+      </div>
+
+      <button class="accordion"style="color:#0b5fef"><b>TATA electronics</b></button>
+      <div class="panel"style="font-size:10px;">
+        <p><h2>Tata Electronics Private Limited (TEPL) is a greenfield venture of the Tata group with expertise in manufacturing precision components.<br>
+        worked as cnc operator,1yr experience </h2><button style="background-color: #7ea9f3;color:#0b5fef">download cv</button></p>
+      </div>
+      <button class="accordion" style="color:#0b5fef"><b>RSMI PRT.LTD</b></button>
+      <div class="panel"style="font-size:10px;">
+        <p><h2>Excellent working environment ,more tallented executives,world no1 EMS company. 
+          Manufacturing of Xiaomi and Nokia mobile phones,main boards pcba,smt operations.</h2><BUTTON style="background-color: #7ea9f3;color:#0b5fef">download cv</BUTTON></p>
+      </div>
+    </div>
+
+
+  </div>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+  <br><br><br><br><br><br><br><br><br>
+  </div>
+  <!--5thpage-->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+     
+      <img src="https://www.morganstanley.com/content/dam/msdotcom/ideas/rise-of-the-tech-super-platforms/tw-rise-of-tech.jpg" style="width:100%">
+      <div class="text"><p><h1>WET TRANSFER <br><br><br><br><br><br><br><br><br>
+      you can do it</h1></p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></div>
+    </div>
+    
+    <div class="mySlides fade">
+      
+      <img src="https://youmatter.world/app/uploads/sites/2/2019/11/tech-planet.jpg" style="width:100%"  >
+      <div class="text"><p><h1>WET TRANSFER</h1></p>
+        <br><br><br><br><br><br><br><br><br>
+        <h1>'That it will never come again is what makes life so sweet.'
+        <br> <h3 style="color: #d51024;"> – Emily Dickinson</h3><br>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></h1>
+      </div>
+    </div>
+    
+    <div class="mySlides fade">
+     
+      <img src="https://www.acquisition-international.com/wp-content/uploads/2020/01/tech-cruve.jpg" style="width:100%">
+      <div class="text"><p><h1>WET TRANSFER</h1></p>
+        <br><br><br><br><br><br><br><br><br>
+        <h1>'To live is the rarest thing in the world. Most people exist, that is all.'
+            <br> <h3 style="color: #d51024;"> Oscar Wilde</h3><br>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span></h1>
+      </div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="grid-container5" style="height:40%;padding: 80px; background-image:url(https://img.freepik.com/free-vector/blue-curve-frame-template_53876-116707.jpg?w=2000);">
+  
+      <div class="item2"> <p><h2>
+        Iam a Available Freelancer</h2>
+    <h4>Browse hundreds of job offers and find the best suitable person</h4>
+    </div>
+      <div class="item3" style="padding:8%;"><form><input type="email" placeholder="Email-id" size="40%" style="height: 50%;border-radius: 2ch;" >
+        <button style="background-color: #0b5fef;color: #ccc; height: 50%;width: 30%;border-radius: 2ch;">send </button></form>
+        </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <!--6thpage-->
+        <div id="projects">
+        <div class="flexcontainer3" style="text-align: center;">
+          <div>
+            <h3><button style="color:#207e27">work</button></h3>
+          </div>
+          <div>
+            <H1>My Projects</H1>
+          </div>
+          <DIV style="font-size:20px;">The easy and safe way to manage your project information. <br>
+            It's free!MyProjects provides an easy and secure way to manage project files, share this</DIV>
+          <br><br><br>
+        </div> 
+        <br><br><br><br> 
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')">All</button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">Angular</button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">Bootstrap</button>
+          <button class="tablinks" onclick="openCity(event, 'america')">Mongodb</button>
+        </div>
+        
+        <div id="London" class="tabcontent">
+          
+                <div class="flex-container2">
+                    <div>
+                    <i class="fa-brands fa-angular" style="color: #d51024;font-size:30px;"></i>
+                     <p>Angular<br>auto drive project<br><a href="https://www.google.com/search?q=angular&rlz=1C1JJTC_enIN1060IN1060&oq=angular&aqs=chrome.0.0i433i512j0i131i433i512l2j0i433i512l7.4162j0j15&sourceid=chrome&ie=UTF-8">
+                      angular.com<i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+                    </a><br><br>
+                  <button>angular</button>
+                <button>react</button>
+              <button>bootstrap</button></p>
+                    </div>
+                    <div> <i class="fa-brands fa-vuejs" style="color: #2cba9d;font-size:30px;"></i>
+                      <p>vue<br>auto drive project<a href="https://www.google.com/search?q=vue&rlz=1C1JJTC_enIN1060IN1060&ei=c-6GZPvkGaKXseMPitCS-Ac&ved=0ahUKEwi76uKfvr3_AhWiS2wGHQqoBH8Q4dUDCA8&uact=5&oq=vue&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzINCAAQigUQsQMQgwEQQzINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIKCAAQigUQsQMQQzINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIHCAAQigUQQzINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIHCAAQigUQQzoKCAAQRxDWBBCwAzoKCAAQigUQsAMQQzoHCAAQgAQQCjoFCAAQgAQ6DwgAEIoFEOoCELQCEEMYAToPCC4QigUQ6gIQtAIQQxgBOhkIABCKBRDqAhC0AhCKAxC3AxDUAxDlAhgBOhUIABADEI8BEOoCELQCEIwDEOUCGAI6FQguEAMQjwEQ6gIQtAIQjAMQ5QIYAjoICAAQgAQQsQM6CwgAEIAEELEDEIMBOggILhCABBDUAkoECEEYAEoFCEASATFQ2AZY3xdgnR1oAnABeAKAAZYBiAHDB5IBAzEuN5gBAKABAbABFMABAcgBCtoBBAgBGAfaAQYIAhABGAo&sclient=gws-wiz-serp">
+                      <br>vue.com <i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+                      </a><br><br>
+                    <button>angular</button>
+                  <button>react</button>
+                <button>bootstrap</button>
+                      </a></p></div>
+                      <div>
+                        <i class="fa-solid fa-leaf" style="color: #207e27;font-size: 30px;"></i>
+                      <p>Mongo<br>auto drive project<br><a href="https://www.google.com/search?q=mongodb&rlz=1C1JJTC_enIN1060IN1060&ei=O-yGZOXYGvfv4-EPnciC4As&oq=mong&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMg0IABCKBRCxAxCDARBDMg0IABCKBRCxAxCDARBDMhAILhCKBRCxAxCDARDUAhBDMgoIABCKBRCxAxBDMgsILhCABBCxAxCDATINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIOCC4QgAQQsQMQgwEQ1AIyCggAEIoFELEDEEMyDQgAEIoFELEDEIMBEEM6CggAEEcQ1gQQsAM6CggAEIoFELADEEM6CwgAEIAEELEDEIMBOgcIABCKBRBDOg4IABCABBCxAxCDARDJAzoOCAAQgAQQsQMQgwEQkgM6CAgAEIoFEJIDOg8IABCKBRDqAhC0AhBDGAE6FQgAEAMQjwEQ6gIQtAIQjAMQ5QIYAjoVCC4QAxCPARDqAhC0AhCMAxDlAhgCOhEILhCABBCxAxCDARDHARDRAzoICC4QgAQQsQM6BQgAEIAEOgsILhCABBDHARDRAzoHCC4QigUQQzoKCC4QigUQ1AIQQzoNCC4QigUQxwEQ0QMQQ0oECEEYAFCJB1jVHmDLM2gCcAF4AIABeIgBpwmSAQM4LjSYAQCgAQGwARTAAQHIAQraAQQIARgH2gEGCAIQARgK&sclient=gws-wiz-serp">
+                      mongo.com</a><i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+                      <br><br>
+                    <button>angular</button>
+                  <button>react</button>
+                <button>bootstrap</button></p>
+                      </div>
+                  <div><i class="fa-brands fa-bootstrap" style="color: #5213e7;font-size:30px;"></i>
+                    <p> Bootstrap<br>auto drive project<br><a href="https://www.google.com/search?q=bootstrap&rlz=1C1JJTC_enIN1060IN1060&oq=boot&aqs=chrome.1.69i57j0i131i433i512l2j69i59j0i131i433i512j0i433i512j0i131i433i512j0i433i512l3.4722j0j15&sourceid=chrome&ie=UTF-8">
+                    bootstrap.com</a><i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+                    <br><br>
+                  <button>angular</button>
+                <button>react</button>
+              <button>bootstrap</button></p>
+                  </div>
+                  <div><i class="fa-brands fa-laravel" style="color: #eb0505;font-size: 30px;"></i>
+                    <p>laravel<br>auto drive project<br><a href="https://www.google.com/search?q=larvel&rlz=1C1JJTC_enIN1060IN1060&oq=larvel&aqs=chrome..69i57j0i10i512l2j0i10i131i433i512j0i10i433i512j0i10i131i433i512l2j0i10i433i512j0i10i131i433i512j0i10i512.3087j0j7&sourceid=chrome&ie=UTF-8">
+                      laravel.com<i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+                    </a><br><br>
+                  <button>angular</button>
+                <button>react</button>
+              <button>bootstrap</button></p>
+                  </div>
+              </div>
+        </div>
+          
+          
+        <div id="Paris" class="tabcontent">
+          <div class="flex-container2">
+             <div>
+            <i class="fa-brands fa-angular" style="color: #d51024;font-size:30px;"></i>
+            <p>Angular<br>auto drive projrct<br>
+            <a href="https://www.google.com/search?q=angular&rlz=1C1JJTC_enIN1060IN1060&oq=angular&aqs=chrome.0.0i433i512j0i131i433i512l2j0i433i512l7.4162j0j15&sourceid=chrome&ie=UTF-8">
+              angular.com<i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+            </a><br>
+          <button>angular</button>
+        <button>react</button>
+      <button>bootstrap</button></p>
+          </div>
+          
+        </div>
+        </div>
+        
+        <div id="Tokyo" class="tabcontent">
+         
+          <div class="flex-container2">
+            <div><i class="fa-brands fa-bootstrap" style="color: #5213e7;font-size:30px;"></i>
+              <p> Bootstrap<br>auto drive project<br><a href="https://www.google.com/search?q=bootstrap&rlz=1C1JJTC_enIN1060IN1060&oq=boot&aqs=chrome.1.69i57j0i131i433i512l2j69i59j0i131i433i512j0i433i512j0i131i433i512j0i433i512l3.4722j0j15&sourceid=chrome&ie=UTF-8">
+              bootstrap.com</a><i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+              <br><br>
+            <button>angular</button>
+          <button>react</button>
+        <button>bootstrap</button></p>
+            </div>
+            <div><i class="fa-brands fa-laravel" style="color: #eb0505;font-size: 30px;"></i>
+              <p>laravel<br>auto drive project<br><a href="https://www.google.com/search?q=larvel&rlz=1C1JJTC_enIN1060IN1060&oq=larvel&aqs=chrome..69i57j0i10i512l2j0i10i131i433i512j0i10i433i512j0i10i131i433i512l2j0i10i433i512j0i10i131i433i512j0i10i512.3087j0j7&sourceid=chrome&ie=UTF-8">
+                laravel.com<i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+              </a><br><br>
+            <button>angular</button>
+          <button>react</button>
+        <button>bootstrap</button></p>
+            </div>
+          </div>
+            </div>
+          
+        <div id="america" class="tabcontent">
+          <div class="flex-container2">
+            <div> <i class="fa-brands fa-vuejs" style="color: #2cba9d;font-size:30px;"></i>
+              <p>vue<br>auto drive project<br><a href="https://www.google.com/search?q=vue&rlz=1C1JJTC_enIN1060IN1060&ei=c-6GZPvkGaKXseMPitCS-Ac&ved=0ahUKEwi76uKfvr3_AhWiS2wGHQqoBH8Q4dUDCA8&uact=5&oq=vue&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzINCAAQigUQsQMQgwEQQzINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIKCAAQigUQsQMQQzINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIHCAAQigUQQzINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIHCAAQigUQQzoKCAAQRxDWBBCwAzoKCAAQigUQsAMQQzoHCAAQgAQQCjoFCAAQgAQ6DwgAEIoFEOoCELQCEEMYAToPCC4QigUQ6gIQtAIQQxgBOhkIABCKBRDqAhC0AhCKAxC3AxDUAxDlAhgBOhUIABADEI8BEOoCELQCEIwDEOUCGAI6FQguEAMQjwEQ6gIQtAIQjAMQ5QIYAjoICAAQgAQQsQM6CwgAEIAEELEDEIMBOggILhCABBDUAkoECEEYAEoFCEASATFQ2AZY3xdgnR1oAnABeAKAAZYBiAHDB5IBAzEuN5gBAKABAbABFMABAcgBCtoBBAgBGAfaAQYIAhABGAo&sclient=gws-wiz-serp">
+              vue.com <i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+              </a><br><br>
+            <button>angular</button>
+          <button>react</button>
+        <button>bootstrap</button>
+              </a></p></div>
+              <div>
+                <i class="fa-solid fa-leaf" style="color: #207e27;font-size: 30px;"></i>
+              <p>Mongo<br>auto drive project<br><a href="https://www.google.com/search?q=mongodb&rlz=1C1JJTC_enIN1060IN1060&ei=O-yGZOXYGvfv4-EPnciC4As&oq=mong&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMg0IABCKBRCxAxCDARBDMg0IABCKBRCxAxCDARBDMhAILhCKBRCxAxCDARDUAhBDMgoIABCKBRCxAxBDMgsILhCABBCxAxCDATINCAAQigUQsQMQgwEQQzIKCAAQigUQsQMQQzIOCC4QgAQQsQMQgwEQ1AIyCggAEIoFELEDEEMyDQgAEIoFELEDEIMBEEM6CggAEEcQ1gQQsAM6CggAEIoFELADEEM6CwgAEIAEELEDEIMBOgcIABCKBRBDOg4IABCABBCxAxCDARDJAzoOCAAQgAQQsQMQgwEQkgM6CAgAEIoFEJIDOg8IABCKBRDqAhC0AhBDGAE6FQgAEAMQjwEQ6gIQtAIQjAMQ5QIYAjoVCC4QAxCPARDqAhC0AhCMAxDlAhgCOhEILhCABBCxAxCDARDHARDRAzoICC4QgAQQsQM6BQgAEIAEOgsILhCABBDHARDRAzoHCC4QigUQQzoKCC4QigUQ1AIQQzoNCC4QigUQxwEQ0QMQQ0oECEEYAFCJB1jVHmDLM2gCcAF4AIABeIgBpwmSAQM4LjSYAQCgAQGwARTAAQHIAQraAQQIARgH2gEGCAIQARgK&sclient=gws-wiz-serp">
+                mongo.com</a><i class="fa-solid fa-arrow-up-right-from-square" style="color: #0080ff;"></i>
+              </a><br><br>
+            <button>angular</button>
+          <button>react</button>
+        <button>bootstrap</button></p>
+              </div>
+        </div>
+        </div>
+        
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+        <br><br><br><br><br><br><br><br><br>
+        </div>
+        <!--7th-->
+        <div id="blogs">
+        <br><br><br><br><br><br>
+        <div class="flexcontainer3" style="text-align: center;">
+          <div>
+            <h3><button style="color:#207e27">Blogs</button></h3>
+          </div>
+          <div>
+            <H1>Latest news & insights</H1>
+          </div>
+          <DIV style="font-size:20px;">Blogging is one of the best entry-level writing jobs available.<br> 
+            And many seasoned writers establish lucrative blogging businesses, too. 
+            <br>But to become a paid blog writer,
+             you'll need to develop and follow an action plan.</DIV>
+          <br>
+        </div> 
+        <!-- MAIN (Center website) -->
+<div class="main">
+<!-- Portfolio Gallery Grid -->
+  <div class="row2">
+    <div class="column2" style="width: 50%; justify-content: center;">
+      <div class="content2">
+        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Mountains" style="width:100%">
+        <h3>Change the world with small things</h3>
+        <p>-ANGELIN</p>
+      </div>
+    </div>
+   
+    <div class="column2" style="width: 50%;">
+      <div class="content2" >
+      <img src="data:image/jpeg;base64,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" style="width:100%">
+        <h3>With a clean minimal and professional work</h3>
+        <p>-Angelinhilda</p>
+      </div>
+    </div>
+  <!-- END GRID -->
+  </div>
+  <!-- END MAIN -->
+  </div>
+  <br><br><br><br><br>
+  </div>
+  <!--last-->
+<div id="contact">
+  <div class="grid-container10">
+    <div class="item1"><H2>Get in touch!</H2><br>
+    I am available for freelance if the right project along,feel free to contact us</div>
+    <div class="item2"style="text-align: left;">
+      <form>
+        <label>Name</label><br><input type="text" placeholder="your name"size="40%" style="height: 30%;"><br>
+        <label>subject</label><br><input type="text" placeholder="your subject"size="40%" style="height: 30%;"><br>
+      </form>
+    </div>
+    <div class="item3"style="text-align: left;"> 
+      <form>
+      <label>Email</label><br><input type="email" placeholder="your email"size="40%" style="height: 30%;"><br>
+      <label>contact</label><br><input type="number" placeholder="+001234 5678 90"size="40%" style="height: 30%;"><br>
+    </form>
+      </div>  
+    <div class="item4"style="text-align: center;">
+    <img src="https://camo.githubusercontent.com/cae12fddd9d6982901d82580bdf321d81fb299141098ca1c2d4891870827bf17/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313336302f302a37513379765349765f7430696f4a2d5a2e676966" height="50%" width="80%">
+    <br><br><br><br>
+    <div>
+      <p><i class="fa-sharp fa-solid fa-phone" style="font-size: 40px;"></i><br>+1234567890<br>9am to 6pm</p>
+      <br><br><br><br>
+     <p><i class="fa-regular fa-envelope"></i>angelin@gmail.com</p>
+    </div>   
+</form>
+    </div>
+    <div class="item5" style="text-align: left;">
+      <form>
+        <label>Message</label><br>
+        <textarea id="message" name="message" style="height:80%; width: 100%;"></textarea> 
+      </form>
+    </div>
+  </div>
+  </div>
+  <br><br><br><br><br><br>
+  
+  
